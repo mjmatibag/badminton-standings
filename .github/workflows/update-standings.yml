@@ -1,0 +1,48 @@
+name: Update standings
+on:
+  push:
+    paths:
+      - 'exports/*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pick the export changed in this push
+        id: pick
+        run: |
+          CHANGED=""
+          if [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ] && [ -n "${{ github.event.before }}" ]; then
+            CHANGED=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'exports/' | grep '\.json$' || true)
+          fi
+          if [ -z "$CHANGED" ]; then
+            CHANGED=$(ls exports/*.json 2>/dev/null | sort | tail -1 || true)
+          fi
+          if [ -z "$CHANGED" ]; then
+            echo "No export file found" >&2; exit 1
+          fi
+          LAST=$(echo "$CHANGED" | tail -1)
+          echo "Using export: $LAST"
+          echo "file=$LAST" >> "$GITHUB_OUTPUT"
+
+      - name: Build standings.json
+        run: node build-standings.js "${{ steps.pick.outputs.file }}"
+
+      - name: Commit and push standings
+        run: |
+          git config user.name "standings-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add standings.json
+          git diff --cached --quiet || (git commit -m "Update standings from export" && git push)
