@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Pick the export changed in this push
         id: pick
@@ -39,9 +39,11 @@ jobs:
           echo "file=$LAST" >> "$GITHUB_OUTPUT"
 
       - name: Build standings.json
+        if: steps.pick.outputs.file != ''
         run: node build-standings.js "${{ steps.pick.outputs.file }}"
 
       - name: Commit and push standings
+        if: steps.pick.outputs.file != ''
         run: |
           git config user.name "standings-bot"
           git config user.email "actions@users.noreply.github.com"
