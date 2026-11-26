@@ -1,0 +1,13 @@
+{"players":[
+ {"id":"alice","name":"Alice","gender":"female","level":"beginner-low"},
+ {"id":"ben","name":"Ben","gender":"male","level":"beginner-high"},
+ {"id":"cara","name":"Cara","gender":"female","level":"intermediate-low"},
+ {"id":"dan","name":"Dan","gender":"male","level":"intermediate-high"},
+ {"id":"eve","name":"Eve","gender":"female","level":"advanced-low"},
+ {"id":"finn","name":"Finn","gender":"male","level":"advanced-high"}],
+"session":{"started":1795836000000,"ended":true,"champions":["cara","finn","ben"],"matches":[
+ {"a":[{"id":"dan","name":"Dan"},{"id":"alice","name":"Alice"}],"b":[{"id":"cara","name":"Cara"},{"id":"ben","name":"Ben"}],"scoreA":30,"scoreB":35},
+ {"a":[{"id":"ben","name":"Ben"},{"id":"finn","name":"Finn"}],"b":[{"id":"dan","name":"Dan"},{"id":"eve","name":"Eve"}],"scoreA":40,"scoreB":38},
+ {"a":[{"id":"alice","name":"Alice"},{"id":"cara","name":"Cara"}],"b":[{"id":"ben","name":"Ben"},{"id":"dan","name":"Dan"}],"scoreA":35,"scoreB":33}],
+"waiting":[],"active":null},
+"archive":[]}
