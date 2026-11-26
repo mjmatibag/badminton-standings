@@ -12,11 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 2
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '20'
 
@@ -31,7 +31,8 @@ jobs:
             CHANGED=$(ls exports/*.json 2>/dev/null | sort | tail -1 || true)
           fi
           if [ -z "$CHANGED" ]; then
-            echo "No export file found" >&2; exit 1
+            echo "No export file present — nothing to build (this is not an error)."
+            exit 0
           fi
           LAST=$(echo "$CHANGED" | tail -1)
           echo "Using export: $LAST"
