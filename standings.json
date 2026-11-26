@@ -1,15 +1,109 @@
 {
-  "sample": true,
-  "ended": false,
-  "updated": 1795836000000,
+  "sample": false,
+  "ended": true,
+  "updated": 1795713701428,
   "sessionDate": 1795836000000,
-  "champions": [],
+  "champions": [
+    {
+      "name": "Cara",
+      "gender": "female",
+      "level": "intermediate-low",
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 7,
+      "buchholz": 1
+    },
+    {
+      "name": "Finn",
+      "gender": "male",
+      "level": "advanced-high",
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 2,
+      "buchholz": 0
+    },
+    {
+      "name": "Ben",
+      "gender": "male",
+      "level": "beginner-high",
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "winRate": 0.6666666666666666,
+      "pd": 5,
+      "buchholz": 2
+    }
+  ],
   "rows": [
-    {"name": "Cara", "gender": "female", "level": "intermediate-low", "games": 2, "wins": 2, "losses": 0, "winRate": 1.0, "pd": 7, "buchholz": 1},
-    {"name": "Finn", "gender": "male", "level": "advanced-high", "games": 1, "wins": 1, "losses": 0, "winRate": 1.0, "pd": 2, "buchholz": 0},
-    {"name": "Ben", "gender": "male", "level": "beginner-high", "games": 3, "wins": 2, "losses": 1, "winRate": 0.6667, "pd": 5, "buchholz": 2},
-    {"name": "Alice", "gender": "female", "level": "beginner-low", "games": 2, "wins": 1, "losses": 1, "winRate": 0.5, "pd": -3, "buchholz": 4},
-    {"name": "Eve", "gender": "female", "level": "advanced-low", "games": 1, "wins": 0, "losses": 1, "winRate": 0.0, "pd": -2, "buchholz": 3},
-    {"name": "Dan", "gender": "male", "level": "intermediate-high", "games": 3, "wins": 0, "losses": 3, "winRate": 0.0, "pd": -9, "buchholz": 7}
+    {
+      "name": "Cara",
+      "gender": "female",
+      "level": "intermediate-low",
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 7,
+      "buchholz": 1
+    },
+    {
+      "name": "Finn",
+      "gender": "male",
+      "level": "advanced-high",
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 2,
+      "buchholz": 0
+    },
+    {
+      "name": "Ben",
+      "gender": "male",
+      "level": "beginner-high",
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "winRate": 0.6666666666666666,
+      "pd": 5,
+      "buchholz": 2
+    },
+    {
+      "name": "Alice",
+      "gender": "female",
+      "level": "beginner-low",
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "winRate": 0.5,
+      "pd": -3,
+      "buchholz": 4
+    },
+    {
+      "name": "Eve",
+      "gender": "female",
+      "level": "advanced-low",
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "pd": -2,
+      "buchholz": 3
+    },
+    {
+      "name": "Dan",
+      "gender": "male",
+      "level": "intermediate-high",
+      "games": 3,
+      "wins": 0,
+      "losses": 3,
+      "winRate": 0,
+      "pd": -9,
+      "buchholz": 7
+    }
   ]
 }
