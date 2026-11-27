@@ -27,33 +27,36 @@ if (!files.length) {
 }
 
 const playersById = {};
-const sessions = []; // every session seen in any file: current sessions + archived ones
+const byStarted = new Map(); // session.started -> merged session (files overlap; copies of the same session are combined)
 
 for (const f of files) {
   let data;
   try { data = JSON.parse(fs.readFileSync(f, 'utf8')); }
   catch (e) { console.error(`Skipping unreadable export ${f}: ${e.message}`); continue; }
   (Array.isArray(data.players) ? data.players : []).forEach(p => { playersById[p.id] = p; });
-  if (data.session) sessions.push(data.session);
-  (Array.isArray(data.archive) ? data.archive : []).forEach(s => { if (s) sessions.push(s); });
+  const add = s => {
+    if (!s) return;
+    const key = s.started || 0;
+    const agg = byStarted.get(key) || { started: key, ended: false, champions: [], matchById: {} };
+    for (const m of (Array.isArray(s.matches) ? s.matches : [])) if (m && m.id && !agg.matchById[m.id]) agg.matchById[m.id] = m;
+    if (s.ended) agg.ended = true;
+    if (Array.isArray(s.champions) && s.champions.length) agg.champions = s.champions;
+    byStarted.set(key, agg);
+  };
+  add(data.session);
+  (Array.isArray(data.archive) ? data.archive : []).forEach(add);
 }
 
 // The session to show: the most recent one that has games or a finished podium
-const target = sessions
-  .filter(s => (Array.isArray(s.matches) && s.matches.length) ||
-               (s.ended && Array.isArray(s.champions) && s.champions.length))
-  .sort((a, b) => (a.started || 0) - (b.started || 0))
+const target = [...byStarted.values()]
+  .filter(s => Object.keys(s.matchById).length || (s.ended && s.champions.length))
+  .sort((a, b) => a.started - b.started)
   .pop();
 if (!target) { console.error('No session with matches or champions found in the given exports'); process.exit(1); }
 
-// Dedupe matches by id (snapshots of the same session overlap)
-const seen = new Set();
-const matches = [];
-for (const m of (Array.isArray(target.matches) ? target.matches : [])) {
-  if (seen.has(m.id)) continue;
-  seen.add(m.id);
-  matches.push(m);
-}
+// Newest match last (matches carry ts) — order only affects nothing in the math,
+// but keeps opponents arrays deterministic across runs
+const matches = Object.values(target.matchById).sort((a, b) => (a.ts || 0) - (b.ts || 0));
 
 const stats = {};
 const ensure = (id, name) => {

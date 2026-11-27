@@ -136,7 +136,9 @@ function render(d){
     <p class="updated">${d.updated ? `Updated ${esc(fmtTime(d.updated))}` : ''}</p>`;
 }
 
-fetch('standings.json')
+// Cache-bust: GitHub Pages serves standings.json with a 10-minute cache,
+// so a plain reload can show stale data — the query key bypasses it
+fetch('standings.json?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(render)
   .catch(() => render(null));
