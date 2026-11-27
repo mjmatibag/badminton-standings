@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# Auto-uploads can arrive seconds apart (per finished match) — serialize
+# runs so two builds never race to commit standings.json
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
