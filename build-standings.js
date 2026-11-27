@@ -7,9 +7,10 @@
  * so files overlap heavily. All files are compiled together and matches
  * are deduped by their id — each upload only contributes its increments.
  *
- * The standings shown are for the most recent session that actually has
- * data (live matches, or a finished session with champions), matching
- * the app, where stats reset per session. The podium comes from that
+ * The standings shown are for the most recent session (by start time) —
+ * the one currently live in the app. A just-restarted session has no
+ * matches yet, so the page then shows a zeroed roster: restarting the
+ * session resets the shareable view too. The podium comes from that
  * session's champions when it has ended.
  *
  * Ranking (matches the offline app exactly):
@@ -49,12 +50,13 @@ for (const f of files) {
   (Array.isArray(data.archive) ? data.archive : []).forEach(s => add(s, data.ts));
 }
 
-// The session to show: the most recent one that has games or a finished podium
+// The session to show: the newest one by start time — i.e. the session
+// currently live in the app. When it is a fresh restart (no matches, no
+// champions yet) the build emits a zeroed roster, resetting the page.
 const target = [...byStarted.values()]
-  .filter(s => Object.keys(s.matchById).length || (s.ended && s.champions.length))
   .sort((a, b) => a.started - b.started)
   .pop();
-if (!target) { console.error('No session with matches or champions found in the given exports'); process.exit(1); }
+if (!target) { console.error('No sessions found in the given exports'); process.exit(1); }
 
 // Newest match last (matches carry ts) — order only affects nothing in the math,
 // but keeps opponents arrays deterministic across runs
