@@ -1,0 +1,301 @@
+{
+  "players": [
+    {
+      "id": "po5obpj25",
+      "name": "Aira",
+      "gender": "female",
+      "level": "intermediate-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "p3vjhgis2",
+      "name": "Al",
+      "gender": "female",
+      "level": "intermediate-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "pz6fvu9xe",
+      "name": "Alvin",
+      "gender": "male",
+      "level": "beginner-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "pfk2zzyii",
+      "name": "Arian",
+      "gender": "female",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "p4y5doxvm",
+      "name": "Arvin",
+      "gender": "male",
+      "level": "advanced-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "p5ox5vb10",
+      "name": "Cha",
+      "gender": "female",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "p7n0f4ec1",
+      "name": "Cisco",
+      "gender": "male",
+      "level": "intermediate-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "pc6j8aejp",
+      "name": "Jai",
+      "gender": "female",
+      "level": "advanced-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pnfnr8iav",
+      "name": "Janine",
+      "gender": "female",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pg6zfo6up",
+      "name": "Jastine",
+      "gender": "male",
+      "level": "advanced-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "pgun9b39v",
+      "name": "Jessa",
+      "gender": "female",
+      "level": "advanced-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "paluzrqir",
+      "name": "Joco",
+      "gender": "male",
+      "level": "advanced-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "po3pu1fwn",
+      "name": "Jonah",
+      "gender": "female",
+      "level": "beginner-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "peibiexm1",
+      "name": "JR",
+      "gender": "male",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pk3ed8aq4",
+      "name": "Kenneth",
+      "gender": "male",
+      "level": "intermediate-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "piz9pk4ja",
+      "name": "Mommy Ruby",
+      "gender": "female",
+      "level": "beginner-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "p1wat0hqg",
+      "name": "Maymay",
+      "gender": "female",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "phq12cr4p",
+      "name": "Michael",
+      "gender": "male",
+      "level": "advanced-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pjwtx39ny",
+      "name": "Mike",
+      "gender": "male",
+      "level": "advanced-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "ppa4ynqiz",
+      "name": "MJ",
+      "gender": "male",
+      "level": "advanced-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "p9d65y8fd",
+      "name": "Nana",
+      "gender": "female",
+      "level": "beginner-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pnb4r0ltg",
+      "name": "Omar",
+      "gender": "male",
+      "level": "beginner-high",
+      "created": 1795712298467
+    },
+    {
+      "id": "pvs9av12c",
+      "name": "Pau",
+      "gender": "female",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pty6omgbn",
+      "name": "Rene",
+      "gender": "male",
+      "level": "intermediate-low",
+      "created": 1795712298467
+    },
+    {
+      "id": "pnjk04dqh",
+      "name": "Yeye",
+      "gender": "male",
+      "level": "intermediate-high",
+      "created": 1795712298467
+    }
+  ],
+  "session": {
+    "started": 1795791000225,
+    "ended": false,
+    "champions": [],
+    "matches": [
+      {
+        "id": "xi0kz1roj",
+        "ts": 1795791333942,
+        "a": [
+          {
+            "id": "ppa4ynqiz",
+            "name": "MJ"
+          },
+          {
+            "id": "phq12cr4p",
+            "name": "Michael"
+          }
+        ],
+        "b": [
+          {
+            "id": "pg6zfo6up",
+            "name": "Jastine"
+          },
+          {
+            "id": "p4y5doxvm",
+            "name": "Arvin"
+          }
+        ],
+        "scoreA": 35,
+        "scoreB": 30,
+        "court": 1
+      },
+      {
+        "id": "xi60psjtb",
+        "ts": 1795791342064,
+        "a": [
+          {
+            "id": "po5obpj25",
+            "name": "Aira"
+          },
+          {
+            "id": "p3vjhgis2",
+            "name": "Al"
+          }
+        ],
+        "b": [
+          {
+            "id": "pgun9b39v",
+            "name": "Jessa"
+          },
+          {
+            "id": "pc6j8aejp",
+            "name": "Jai"
+          }
+        ],
+        "scoreA": 33,
+        "scoreB": 35,
+        "court": 2
+      },
+      {
+        "id": "xzz9zlu43",
+        "ts": 1795791349160,
+        "a": [
+          {
+            "id": "pvs9av12c",
+            "name": "Pau"
+          },
+          {
+            "id": "pnjk04dqh",
+            "name": "Yeye"
+          }
+        ],
+        "b": [
+          {
+            "id": "peibiexm1",
+            "name": "JR"
+          },
+          {
+            "id": "p7n0f4ec1",
+            "name": "Cisco"
+          }
+        ],
+        "scoreA": 27,
+        "scoreB": 35,
+        "court": 3
+      }
+    ],
+    "courts": [
+      {
+        "id": "xeq7ef1yx",
+        "num": 1,
+        "match": null
+      },
+      {
+        "id": "x3p1d88bs",
+        "num": 2,
+        "match": null
+      },
+      {
+        "id": "xwnzke3nd",
+        "num": 3,
+        "match": null
+      }
+    ],
+    "staged": [],
+    "checkinEnabled": false,
+    "startTime": "",
+    "checkins": {},
+    "exclusions": [],
+    "checkouts": [],
+    "finance": {
+      "split": "equal",
+      "rate": 0,
+      "hours": 0,
+      "courts": 0,
+      "shuttlePrice": 0,
+      "shuttleCount": 0,
+      "perGame": 0,
+      "paid": {}
+    }
+  },
+  "archive": []
+}
