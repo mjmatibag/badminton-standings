@@ -1,7 +1,7 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795794109342,
+  "updated": 1795794774601,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
@@ -12,7 +12,7 @@
       "losses": 0,
       "winRate": 1,
       "pd": 14,
-      "buchholz": 0
+      "buchholz": 1
     },
     {
       "name": "Mike",
@@ -21,7 +21,7 @@
       "losses": 0,
       "winRate": 1,
       "pd": 14,
-      "buchholz": 0
+      "buchholz": 1
     },
     {
       "name": "Alvin",
@@ -39,6 +39,15 @@
       "losses": 0,
       "winRate": 1,
       "pd": 13,
+      "buchholz": 0
+    },
+    {
+      "name": "MJ",
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 11,
       "buchholz": 0
     },
     {
@@ -61,15 +70,6 @@
     },
     {
       "name": "Michael",
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "pd": 5,
-      "buchholz": 0
-    },
-    {
-      "name": "MJ",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -114,6 +114,15 @@
       "buchholz": 0
     },
     {
+      "name": "Joco",
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "winRate": 0.5,
+      "pd": -8,
+      "buchholz": 1
+    },
+    {
       "name": "Aira",
       "games": 1,
       "wins": 0,
@@ -150,24 +159,6 @@
       "buchholz": 2
     },
     {
-      "name": "Arvin",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -5,
-      "buchholz": 2
-    },
-    {
-      "name": "Jastine",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -5,
-      "buchholz": 2
-    },
-    {
       "name": "Pau",
       "games": 1,
       "wins": 0,
@@ -184,6 +175,24 @@
       "winRate": 0,
       "pd": -8,
       "buchholz": 2
+    },
+    {
+      "name": "Arvin",
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "winRate": 0,
+      "pd": -11,
+      "buchholz": 3
+    },
+    {
+      "name": "Jastine",
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "winRate": 0,
+      "pd": -11,
+      "buchholz": 3
     },
     {
       "name": "Jonah",
@@ -205,15 +214,6 @@
     },
     {
       "name": "Janine",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -14,
-      "buchholz": 2
-    },
-    {
-      "name": "Joco",
       "games": 1,
       "wins": 0,
       "losses": 1,
