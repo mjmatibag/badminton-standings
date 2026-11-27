@@ -1,21 +1,30 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795795971426,
+  "updated": 1795796370547,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
     {
-      "name": "Cha",
-      "games": 1,
-      "wins": 1,
+      "name": "Jai",
+      "games": 2,
+      "wins": 2,
       "losses": 0,
       "winRate": 1,
-      "pd": 14,
+      "pd": 17,
       "buchholz": 1
     },
     {
-      "name": "Mike",
+      "name": "Jessa",
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 17,
+      "buchholz": 1
+    },
+    {
+      "name": "Cha",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -69,15 +78,6 @@
       "buchholz": 0
     },
     {
-      "name": "Michael",
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "pd": 5,
-      "buchholz": 0
-    },
-    {
       "name": "Maymay",
       "games": 1,
       "wins": 1,
@@ -96,22 +96,13 @@
       "buchholz": 0
     },
     {
-      "name": "Jai",
-      "games": 1,
+      "name": "Mike",
+      "games": 2,
       "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "pd": 2,
-      "buchholz": 0
-    },
-    {
-      "name": "Jessa",
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "winRate": 1,
-      "pd": 2,
-      "buchholz": 0
+      "losses": 1,
+      "winRate": 0.5,
+      "pd": -1,
+      "buchholz": 3
     },
     {
       "name": "Joco",
@@ -123,13 +114,22 @@
       "buchholz": 1
     },
     {
+      "name": "Michael",
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "winRate": 0.5,
+      "pd": -10,
+      "buchholz": 2
+    },
+    {
       "name": "Aira",
       "games": 1,
       "wins": 0,
       "losses": 1,
       "winRate": 0,
       "pd": -2,
-      "buchholz": 2
+      "buchholz": 4
     },
     {
       "name": "Al",
@@ -138,7 +138,7 @@
       "losses": 1,
       "winRate": 0,
       "pd": -2,
-      "buchholz": 2
+      "buchholz": 4
     },
     {
       "name": "Kenneth",
@@ -233,17 +233,6 @@
   ],
   "live": {
     "courts": [
-      {
-        "num": 1,
-        "a": [
-          "Mike",
-          "Michael"
-        ],
-        "b": [
-          "Jessa",
-          "Jai"
-        ]
-      },
       {
         "num": 2,
         "a": [
