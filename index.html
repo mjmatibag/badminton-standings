@@ -137,11 +137,20 @@ function render(d){
 }
 
 // Cache-bust: GitHub Pages serves standings.json with a 10-minute cache,
-// so a plain reload can show stale data — the query key bypasses it
-fetch('standings.json?v=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(render)
-  .catch(() => render(null));
+// so a plain reload can show stale data — the query key bypasses it.
+// The page also re-polls every 30s and re-renders only when data changed,
+// so an open tab always shows the latest without any manual reload.
+let loaded = false, lastUpdated = null;
+function load(){
+  fetch('standings.json?v=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => {
+      if (!loaded || d.updated !== lastUpdated){ loaded = true; lastUpdated = d.updated; render(d); }
+    })
+    .catch(() => { if (!loaded) render(null); });
+}
+load();
+setInterval(load, 30000);
 </script>
 
 </body>
