@@ -1,7 +1,7 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795793841647,
+  "updated": 1795794109342,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
@@ -21,6 +21,24 @@
       "losses": 0,
       "winRate": 1,
       "pd": 14,
+      "buchholz": 0
+    },
+    {
+      "name": "Alvin",
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 13,
+      "buchholz": 0
+    },
+    {
+      "name": "Arian",
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "winRate": 1,
+      "pd": 13,
       "buchholz": 0
     },
     {
@@ -168,6 +186,24 @@
       "buchholz": 2
     },
     {
+      "name": "Jonah",
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "pd": -13,
+      "buchholz": 2
+    },
+    {
+      "name": "Omar",
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "winRate": 0,
+      "pd": -13,
+      "buchholz": 2
+    },
+    {
       "name": "Janine",
       "games": 1,
       "wins": 0,
@@ -186,43 +222,7 @@
       "buchholz": 2
     },
     {
-      "name": "Alvin",
-      "games": 0,
-      "wins": 0,
-      "losses": 0,
-      "winRate": 0,
-      "pd": 0,
-      "buchholz": 0
-    },
-    {
-      "name": "Arian",
-      "games": 0,
-      "wins": 0,
-      "losses": 0,
-      "winRate": 0,
-      "pd": 0,
-      "buchholz": 0
-    },
-    {
-      "name": "Jonah",
-      "games": 0,
-      "wins": 0,
-      "losses": 0,
-      "winRate": 0,
-      "pd": 0,
-      "buchholz": 0
-    },
-    {
       "name": "Mommy Ruby",
-      "games": 0,
-      "wins": 0,
-      "losses": 0,
-      "winRate": 0,
-      "pd": 0,
-      "buchholz": 0
-    },
-    {
-      "name": "Omar",
       "games": 0,
       "wins": 0,
       "losses": 0,
