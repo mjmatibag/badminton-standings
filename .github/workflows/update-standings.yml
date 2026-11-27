@@ -25,7 +25,8 @@ jobs:
         run: |
           CHANGED=""
           if [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ] && [ -n "${{ github.event.before }}" ]; then
-            CHANGED=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'exports/' | grep '\.json$' || true)
+            # Only files that still exist in this checkout — deleted exports can't be built
+            CHANGED=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'exports/' | grep '\.json$' | while read -r f; do [ -f "$f" ] && echo "$f"; done || true)
           fi
           if [ -z "$CHANGED" ]; then
             CHANGED=$(ls exports/*.json 2>/dev/null | sort | tail -1 || true)
