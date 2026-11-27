@@ -69,6 +69,14 @@ td.nm{white-space:normal;min-width:0}
 .pod.p2{border-color:var(--silver)}
 .pod.p3{border-color:var(--bronze)}
 .updated{font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums;text-align:center;margin:14px 0 0}
+.tabs2{display:flex;gap:8px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+.t2{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:99px;
+  padding:7px 14px;font:600 .82rem var(--font-body);cursor:pointer}
+.t2.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.crt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.crt:last-child{border-bottom:0}
+.crt .cn{font-weight:700;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.crt .tm{font-weight:700;font-size:1rem;min-width:0}
 .rule{display:inline-flex;align-items:center;gap:7px}
 .rule::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--good);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
@@ -112,6 +120,10 @@ function tableHTML(rows, ended){
   </table></div>`;
 }
 
+let tab = 'standings';
+try{ tab = localStorage.getItem('bq_tab') || 'standings'; }catch(e){}
+let lastData = null;
+
 function render(d){
   const app = document.getElementById('app');
   if (!d || !Array.isArray(d.rows)){
@@ -120,6 +132,16 @@ function render(d){
       <p class="muted">The standings will appear here once the first results are published from the Badminton Queue app.</p></div>`;
     return;
   }
+  lastData = d;
+  const live = (d && d.live) || { courts: [], upcoming: [] };
+  const nl = live.courts.length, nu = live.upcoming.length;
+  const crt = (pre, a, b) => `<div class="crt"><span class="cn">${pre}</span>
+    <span class="tm">${esc(a.join(' & '))}</span><span class="muted sm">vs</span>
+    <span class="tm">${esc(b.join(' & '))}</span></div>`;
+  const liveHTML = `<div class="card">${nl ? live.courts.map(c => crt('Court ' + c.num, c.a, c.b)).join('')
+    : '<p class="muted center" style="margin:6px 0">No games on court right now.</p>'}</div>`;
+  const upHTML = `<div class="card">${nu ? live.upcoming.map((s,i) => crt('#' + (i+1), s.a, s.b)).join('')
+    : '<p class="muted center" style="margin:6px 0">The queue is empty.</p>'}</div>`;
   const ended = !!d.ended;
   const pod = ended && Array.isArray(d.champions) && d.champions.length ?
     `<div class="podium">${d.champions.slice(0,3).map((r,i) => `<div class="pod ${PCLS[i]}">
@@ -130,16 +152,33 @@ function render(d){
     <h1 class="pv-title center">🏸 ${ended ? 'Final Standings' : 'Badminton Standings'}</h1>
     <p class="pv-sub center">${esc(fmtDate(d.sessionDate))} · doubles · first to 35</p>
     ${d.sample ? `<p class="center sm" style="margin:10px 0 0"><span class="badge">Sample data</span></p>` : ''}
-    ${pod}
-    <div class="card">${tableHTML(d.rows, ended)}
-      <p class="sm muted" style="margin:10px 0 0">Rank: win rate → point difference → Buchholz median → wins.</p></div>
+    <div class="tabs2">
+      <button class="t2${tab==='standings'?' on':''}" data-tab="standings">📊 Standings</button>
+      <button class="t2${tab==='live'?' on':''}" data-tab="live">🏸 Live${nl ? ' · ' + nl : ''}</button>
+      <button class="t2${tab==='upcoming'?' on':''}" data-tab="upcoming">⏭ Queue${nu ? ' · ' + nu : ''}</button>
+    </div>
+    ${tab==='standings' ? `${pod}
+      <div class="card">${tableHTML(d.rows, ended)}
+        <p class="sm muted" style="margin:10px 0 0">Rank: win rate → point difference → Buchholz median → wins.</p></div>` : ''}
+    ${tab==='live' ? liveHTML : ''}
+    ${tab==='upcoming' ? upHTML : ''}
     <p class="updated">${d.updated ? `Updated ${esc(fmtTime(d.updated))}` : ''}</p>`;
 }
 
+document.getElementById('app').addEventListener('click', e => {
+  const b = e.target.closest('[data-tab]');
+  if (!b) return;
+  tab = b.dataset.tab;
+  try{ localStorage.setItem('bq_tab', tab); }catch(err){}
+  render(lastData);
+});
+
 // Cache-bust: GitHub Pages serves standings.json with a 10-minute cache,
 // so a plain reload can show stale data — the query key bypasses it.
-// The page also re-polls every 30s and re-renders only when data changed,
-// so an open tab always shows the latest without any manual reload.
+// Polling runs in a Web Worker because browsers throttle timers in
+// background tabs (an inactive PC tab would otherwise poll at most once
+// per minute or stop entirely); a visibilitychange catch-up also refreshes
+// the instant the tab becomes active again.
 let loaded = false, lastUpdated = null;
 function load(){
   fetch('standings.json?v=' + Date.now())
@@ -150,7 +189,11 @@ function load(){
     .catch(() => { if (!loaded) render(null); });
 }
 load();
-setInterval(load, 30000);
+try{
+  const w = new Worker(URL.createObjectURL(new Blob(['setInterval(function(){ postMessage(0); }, 30000);'])));
+  w.onmessage = load;
+}catch(e){ setInterval(load, 30000); }
+document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
 </script>
 
 </body>

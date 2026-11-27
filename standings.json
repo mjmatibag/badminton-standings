@@ -1,7 +1,7 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795794774601,
+  "updated": 1795795137644,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
@@ -230,5 +230,9 @@
       "pd": 0,
       "buchholz": 0
     }
-  ]
+  ],
+  "live": {
+    "courts": [],
+    "upcoming": []
+  }
 }

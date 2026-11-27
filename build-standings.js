@@ -34,17 +34,19 @@ for (const f of files) {
   try { data = JSON.parse(fs.readFileSync(f, 'utf8')); }
   catch (e) { console.error(`Skipping unreadable export ${f}: ${e.message}`); continue; }
   (Array.isArray(data.players) ? data.players : []).forEach(p => { playersById[p.id] = p; });
-  const add = s => {
+  const add = (s, ts) => {
     if (!s) return;
     const key = s.started || 0;
-    const agg = byStarted.get(key) || { started: key, ended: false, champions: [], matchById: {} };
+    const agg = byStarted.get(key) || { started: key, ended: false, champions: [], matchById: {}, freshest: null };
     for (const m of (Array.isArray(s.matches) ? s.matches : [])) if (m && m.id && !agg.matchById[m.id]) agg.matchById[m.id] = m;
     if (s.ended) agg.ended = true;
     if (Array.isArray(s.champions) && s.champions.length) agg.champions = s.champions;
+    // The freshest copy (latest export ts) carries the current courts & queue
+    if (!agg.freshest || (ts || 0) >= agg.freshest.ts) agg.freshest = { ts: ts || 0, s };
     byStarted.set(key, agg);
   };
-  add(data.session);
-  (Array.isArray(data.archive) ? data.archive : []).forEach(add);
+  add(data.session, data.ts);
+  (Array.isArray(data.archive) ? data.archive : []).forEach(s => add(s, data.ts));
 }
 
 // The session to show: the most recent one that has games or a finished podium
@@ -119,6 +121,16 @@ const champions = (target.ended && Array.isArray(target.champions))
       .filter(Boolean)
   : [];
 
+// Names only — spectators see who is playing and who is queued, no scores
+const src = (target.freshest && target.freshest.s) || {};
+const live = {
+  courts: (Array.isArray(src.courts) ? src.courts : [])
+    .filter(c => c && c.match)
+    .map(c => ({ num: c.num, a: c.match.a.map(p => p.name), b: c.match.b.map(p => p.name) })),
+  upcoming: (Array.isArray(src.staged) ? src.staged : [])
+    .map(s => ({ a: s.a.map(p => p.name), b: s.b.map(p => p.name) })),
+};
+
 const out = {
   sample: false,
   ended: !!(target.ended && champions.length),
@@ -126,6 +138,7 @@ const out = {
   sessionDate: target.started || Date.now(),
   champions,
   rows,
+  live,
 };
 fs.writeFileSync('standings.json', JSON.stringify(out, null, 2) + '\n');
 console.log(`standings.json written from ${files.length} export(s): ` +
