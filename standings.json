@@ -1,7 +1,7 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795795759302,
+  "updated": 1795795971426,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
@@ -243,10 +243,9 @@
           "Jessa",
           "Jai"
         ]
-      }
-    ],
-    "upcoming": [
+      },
       {
+        "num": 2,
         "a": [
           "Mommy Ruby",
           "Alvin"
@@ -256,6 +255,7 @@
           "Maymay"
         ]
       }
-    ]
+    ],
+    "upcoming": []
   }
 }
