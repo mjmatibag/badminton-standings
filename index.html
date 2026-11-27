@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="build" content="2026-11-28.1">
 <title>Badminton Standings</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
@@ -191,9 +192,31 @@ function load(){
 load();
 try{
   const w = new Worker(URL.createObjectURL(new Blob(['setInterval(function(){ postMessage(0); }, 30000);'])));
-  w.onmessage = load;
-}catch(e){ setInterval(load, 30000); }
-document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+  w.onmessage = () => { load(); checkNewer(); };
+}catch(e){ setInterval(() => { load(); checkNewer(); }, 30000); }
+document.addEventListener('visibilitychange', () => { if (!document.hidden){ load(); checkNewer(); } });
+
+// Self-update: the cached HTML shell can lag the deployed one by up to 10
+// minutes (Pages caches it), so poll our own page for a newer build stamp
+// and reload once. The sessionStorage guard prevents a reload loop.
+const BUILD = document.querySelector('meta[name="build"]').content;
+function checkNewer(){
+  fetch('index.html?v=' + Date.now())
+    .then(r => r.text())
+    .then(t => {
+      const m = t.match(/<meta name="build" content="([^"]+)"/);
+      if (m && m[1] && m[1] !== BUILD){
+        try{
+          if (sessionStorage.getItem('bq_reloaded') !== m[1]){
+            sessionStorage.setItem('bq_reloaded', m[1]);
+            location.reload();
+          }
+        }catch(e){ location.reload(); }
+      }
+    })
+    .catch(() => {});
+}
+checkNewer();
 </script>
 
 </body>
