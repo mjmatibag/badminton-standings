@@ -1,14 +1,12 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795791630841,
+  "updated": 1795791988152,
   "sessionDate": 1795791000225,
   "champions": [],
   "rows": [
     {
       "name": "Cisco",
-      "gender": "male",
-      "level": "intermediate-high",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -18,8 +16,6 @@
     },
     {
       "name": "JR",
-      "gender": "male",
-      "level": "intermediate-low",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -29,8 +25,6 @@
     },
     {
       "name": "Michael",
-      "gender": "male",
-      "level": "advanced-low",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -40,8 +34,6 @@
     },
     {
       "name": "MJ",
-      "gender": "male",
-      "level": "advanced-high",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -51,8 +43,6 @@
     },
     {
       "name": "Jai",
-      "gender": "female",
-      "level": "advanced-low",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -62,8 +52,6 @@
     },
     {
       "name": "Jessa",
-      "gender": "female",
-      "level": "advanced-low",
       "games": 1,
       "wins": 1,
       "losses": 0,
@@ -73,8 +61,6 @@
     },
     {
       "name": "Aira",
-      "gender": "female",
-      "level": "intermediate-high",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -84,8 +70,6 @@
     },
     {
       "name": "Al",
-      "gender": "female",
-      "level": "intermediate-high",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -95,8 +79,6 @@
     },
     {
       "name": "Arvin",
-      "gender": "male",
-      "level": "advanced-high",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -106,8 +88,6 @@
     },
     {
       "name": "Jastine",
-      "gender": "male",
-      "level": "advanced-high",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -117,8 +97,6 @@
     },
     {
       "name": "Pau",
-      "gender": "female",
-      "level": "intermediate-low",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -128,8 +106,6 @@
     },
     {
       "name": "Yeye",
-      "gender": "male",
-      "level": "intermediate-high",
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -139,8 +115,6 @@
     },
     {
       "name": "Alvin",
-      "gender": "male",
-      "level": "beginner-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -150,8 +124,6 @@
     },
     {
       "name": "Arian",
-      "gender": "female",
-      "level": "intermediate-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -161,8 +133,6 @@
     },
     {
       "name": "Cha",
-      "gender": "female",
-      "level": "intermediate-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -172,8 +142,6 @@
     },
     {
       "name": "Janine",
-      "gender": "female",
-      "level": "intermediate-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -183,8 +151,6 @@
     },
     {
       "name": "Joco",
-      "gender": "male",
-      "level": "advanced-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -194,8 +160,6 @@
     },
     {
       "name": "Jonah",
-      "gender": "female",
-      "level": "beginner-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -205,8 +169,6 @@
     },
     {
       "name": "Kenneth",
-      "gender": "male",
-      "level": "intermediate-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -216,8 +178,6 @@
     },
     {
       "name": "Maymay",
-      "gender": "female",
-      "level": "intermediate-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -227,8 +187,6 @@
     },
     {
       "name": "Mike",
-      "gender": "male",
-      "level": "advanced-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -238,8 +196,6 @@
     },
     {
       "name": "Mommy Ruby",
-      "gender": "female",
-      "level": "beginner-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -249,8 +205,6 @@
     },
     {
       "name": "Nana",
-      "gender": "female",
-      "level": "beginner-low",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -260,8 +214,6 @@
     },
     {
       "name": "Omar",
-      "gender": "male",
-      "level": "beginner-high",
       "games": 0,
       "wins": 0,
       "losses": 0,
@@ -271,8 +223,6 @@
     },
     {
       "name": "Rene",
-      "gender": "male",
-      "level": "intermediate-low",
       "games": 0,
       "wins": 0,
       "losses": 0,

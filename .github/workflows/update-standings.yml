@@ -40,7 +40,9 @@ jobs:
 
       - name: Build standings.json
         if: steps.pick.outputs.file != ''
-        run: node build-standings.js "${{ steps.pick.outputs.file }}"
+        # Compile ALL exports — files overlap (each is a full snapshot),
+        # so build-standings.js dedupes matches by id across all of them.
+        run: node build-standings.js exports/*.json
 
       - name: Commit and push standings
         if: steps.pick.outputs.file != ''

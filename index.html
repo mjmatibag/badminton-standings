@@ -59,7 +59,6 @@ tr:last-child td{border-bottom:0}
 td.nm{white-space:normal;min-width:0}
 .pos{color:var(--good);font-weight:700}
 .neg{color:var(--bad);font-weight:700}
-.lvl{color:var(--muted);font-size:.75rem}
 .podium{display:flex;gap:14px;justify-content:center;align-items:flex-end;margin:22px 0 4px;flex-wrap:wrap}
 .pod{background:var(--surface);border:1px solid var(--line);border-radius:18px;
   padding:20px 26px;text-align:center;min-width:168px;display:flex;flex-direction:column;gap:6px}
@@ -87,10 +86,6 @@ td.nm{white-space:normal;min-width:0}
 
 <script>
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const gi = g => g==='male' ? '♂' : g==='female' ? '♀' : '';
-const lvl = k => ({'beginner-low':'Beginner · Low','beginner-high':'Beginner · High',
-  'intermediate-low':'Intermediate · Low','intermediate-high':'Intermediate · High',
-  'advanced-low':'Advanced · Low','advanced-high':'Advanced · High'}[k] || '');
 const MEDALS = ['🥇','🥈','🥉'], PCLS = ['p1','p2','p3'];
 
 function fmtDate(ts){
@@ -108,7 +103,7 @@ function tableHTML(rows, ended){
     <tr><th>#</th><th class="nm">Player</th><th>W–L</th><th>Win%</th><th>Point diff</th><th>Buchholz</th><th>Games</th></tr>
     ${rows.map((r,i) => `<tr>
       <td>${ended && r.games > 0 && i < 3 ? MEDALS[i] : (r.games > 0 ? i+1 : '·')}</td>
-      <td class="nm">${gi(r.gender)} ${esc(r.name)} <span class="lvl">${esc(lvl(r.level))}</span></td>
+      <td class="nm">${esc(r.name)}</td>
       <td>${r.wins}–${r.losses}</td>
       <td>${r.games ? Math.round(r.winRate*100)+'%' : '—'}</td>
       <td class="${r.pd>0?'pos':r.pd<0?'neg':''}">${r.pd>0?'+':''}${r.pd}</td>
