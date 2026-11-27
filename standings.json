@@ -1,234 +1,234 @@
 {
   "sample": false,
   "ended": false,
-  "updated": 1795796564803,
-  "sessionDate": 1795791000225,
+  "updated": 1795796937877,
+  "sessionDate": 1795796927519,
   "champions": [],
   "rows": [
     {
-      "name": "Cha",
-      "games": 2,
-      "wins": 2,
+      "name": "Aira",
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 29,
-      "buchholz": 1
-    },
-    {
-      "name": "Maymay",
-      "games": 2,
-      "wins": 2,
-      "losses": 0,
-      "winRate": 1,
-      "pd": 19,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
-      "name": "Jai",
-      "games": 2,
-      "wins": 2,
+      "name": "Al",
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 17,
-      "buchholz": 1
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
     },
     {
-      "name": "Jessa",
-      "games": 2,
-      "wins": 2,
+      "name": "Alvin",
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 17,
-      "buchholz": 1
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
     },
     {
       "name": "Arian",
-      "games": 1,
-      "wins": 1,
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 13,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
-      "name": "MJ",
-      "games": 2,
-      "wins": 2,
+      "name": "Arvin",
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 11,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Cha",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
       "name": "Cisco",
-      "games": 1,
-      "wins": 1,
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 8,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Jai",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Janine",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Jastine",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Jessa",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Joco",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Jonah",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
       "name": "JR",
-      "games": 1,
-      "wins": 1,
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 8,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
-      "name": "Rene",
-      "games": 1,
-      "wins": 1,
+      "name": "Kenneth",
+      "games": 0,
+      "wins": 0,
       "losses": 0,
-      "winRate": 1,
-      "pd": 4,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Maymay",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Michael",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
       "buchholz": 0
     },
     {
       "name": "Mike",
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "winRate": 0.5,
-      "pd": -1,
-      "buchholz": 3
-    },
-    {
-      "name": "Alvin",
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "winRate": 0.5,
-      "pd": -2,
-      "buchholz": 2
-    },
-    {
-      "name": "Joco",
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "winRate": 0.5,
-      "pd": -8,
-      "buchholz": 1
-    },
-    {
-      "name": "Michael",
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "winRate": 0.5,
-      "pd": -10,
-      "buchholz": 2
-    },
-    {
-      "name": "Aira",
-      "games": 1,
+      "games": 0,
       "wins": 0,
-      "losses": 1,
+      "losses": 0,
       "winRate": 0,
-      "pd": -2,
-      "buchholz": 4
+      "pd": 0,
+      "buchholz": 0
     },
     {
-      "name": "Al",
-      "games": 1,
+      "name": "MJ",
+      "games": 0,
       "wins": 0,
-      "losses": 1,
+      "losses": 0,
       "winRate": 0,
-      "pd": -2,
-      "buchholz": 4
-    },
-    {
-      "name": "Kenneth",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -4,
-      "buchholz": 3
-    },
-    {
-      "name": "Nana",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -4,
-      "buchholz": 3
-    },
-    {
-      "name": "Pau",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -8,
-      "buchholz": 2
-    },
-    {
-      "name": "Yeye",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -8,
-      "buchholz": 2
-    },
-    {
-      "name": "Arvin",
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "winRate": 0,
-      "pd": -11,
-      "buchholz": 3
-    },
-    {
-      "name": "Jastine",
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "winRate": 0,
-      "pd": -11,
-      "buchholz": 3
-    },
-    {
-      "name": "Jonah",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -13,
-      "buchholz": 2
-    },
-    {
-      "name": "Omar",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -13,
-      "buchholz": 2
-    },
-    {
-      "name": "Janine",
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "winRate": 0,
-      "pd": -14,
-      "buchholz": 3
+      "pd": 0,
+      "buchholz": 0
     },
     {
       "name": "Mommy Ruby",
-      "games": 1,
+      "games": 0,
       "wins": 0,
-      "losses": 1,
+      "losses": 0,
       "winRate": 0,
-      "pd": -15,
-      "buchholz": 4
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Nana",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Omar",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Pau",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Rene",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
+    },
+    {
+      "name": "Yeye",
+      "games": 0,
+      "wins": 0,
+      "losses": 0,
+      "winRate": 0,
+      "pd": 0,
+      "buchholz": 0
     }
   ],
   "live": {
